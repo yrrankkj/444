@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diário de um Dev</title>
+  <style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  margin: 0;
+  background-color: #f4f4f4;
+  color: #222;
+  line-height: 1.5;
+}
+
+header {
+  background-color: #1B4332;
+  color: #FFFFFF;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 0 16px 0;
+  overflow: hidden;
+}
+
+header .capa {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+header h1 {
+  margin: 16px 0 4px 0;
+  font-size: 2rem;
+}
+
+header p {
+  margin: 0;
+  padding: 0 16px;
+  opacity: 0.9;
+}
+
+main {
+  max-width: 800px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.post {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+}
+
+.post-icone {
+  width: 80px;
+  height: 80px;
+  display: block;
+  margin-bottom: 16px;
+  border-radius: 50%;
+}
+
+h2 {
+  margin-top: 0;
+  color: #1B4332;
+}
+
+.autor {
+  font-style: italic;
+  color: #666;
+  margin-top: -8px;
+}
+
+footer {
+  text-align: center;
+  padding: 16px;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+</style>
+</head>
+<body>
+  <header>
+    <img src="data:image/png;base64,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" alt="Capa em tons de verde com formas geométricas decorativas" class="capa">
+    <h1>Diário de um Dev</h1>
+    <p>Anotações, aprendizados e tropeços no caminho da programação</p>
+  </header>
+
+  <main>
+    <article class="post">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAIAAAABc2X6AAABhklEQVR4nO2bMRaCQAxE1ectvIVX8CA2dp7HzsabWmyDorBJJiGE+bWy85kFFh7sT5fzbksclg4QDYWrQ+HqULg6FK7OMWyk5+sx/YPb9R4QY++6tJyV/IefvJewWnWIhzZYGOI5BmiOPGk52WK3jGlYFOirLst/FQAaNiYWOdirtgpD+ol0NgkDZ2OYs14YfuzFOCuF/U7I3hk0whlsG4okYuE8tg1pHplwNtuGKFXQ7WFPppi9KVhpSQMZV0VOw/U2nHMyD+lMuLknHhT+Rf753OjJyYZHrKXexmxaNlwdCn+yrgO4MZ2ZDVeHwtWhcHUoXB0KV2dGOOa9CyzTmdlwdSg8Yl2H8WxaNvyLtZTck5MNV6dXOP+s7kwoezEt7TO9/j44pSfJObFFqcQNZ3OW5tFM6TzOiiTKYziDsy6D/qS1rLN6dNNZeilny7jWy1K8s3FEwHU40tk+FvIjD9d1GGq3IldaflUDt8zvlqBs6Mu0MZv49jAhvD2sDoWrQ+HqULg6bymViWt0BcmxAAAAAElFTkSuQmCC" alt="Ícone circular verde representando um terminal de código" class="post-icone">
+
+      <h2>Primeiro dia de código</h2>
+      <p class="autor">Por: Estudante Alura</p>
+      <p>Hoje comecei este diário para registrar cada passo da minha jornada em programação. Vou compartilhar dúvidas, descobertas e pequenas vitórias ao longo do caminho.</p>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Diário de um Dev</p>
+  </footer>
+</body>
+</html>
